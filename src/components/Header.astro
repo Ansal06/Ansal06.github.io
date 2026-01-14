@@ -7,23 +7,24 @@ const hasEducation = siteConfig.education?.length > 0;
 ---
 
 <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-  <nav class="relative max-w-6xl mx-auto px-8 py-6 flex items-center justify-center gap-10">
+  <nav class="max-w-6xl mx-auto px-8 py-6">
+  <div class="relative flex items-center justify-center gap-10">
 
-    <!-- Left logo (desktop only) -->
-    <div class="absolute left-2 hidden sm:block">
+    <!-- Left logo -->
+    <div class="absolute left-0 hidden sm:block">
       <span id="theme-logo" class="text-xl text-[var(--text)]">☾</span>
     </div>
 
-    <!-- Center navigation -->
-    <ul class="flex items-center gap-6 sm:gap-10 text-[var(--text)] font-medium">
+    <!-- Center nav -->
+    <ul class="flex items-center gap-10 text-[var(--text)] font-medium">
       <li><a href="/" class="nav-link">Home</a></li>
       <li><a href="/#about" class="nav-link">About</a></li>
       {hasProjects && <li><a href="/projects" class="nav-link">Projects</a></li>}
       {hasEducation && <li><a href="/education" class="nav-link">Education</a></li>}
     </ul>
 
-    <!-- Theme toggle (desktop only) -->
-    <div class="absolute right-2 hidden sm:block">
+    <!-- Right toggle -->
+    <div class="absolute right-0 hidden sm:block">
       <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
         <div class="toggle-track">
           <div class="toggle-thumb">
@@ -33,7 +34,9 @@ const hasEducation = siteConfig.education?.length > 0;
       </button>
     </div>
 
-  </nav>
+  </div>
+</nav>
+
 </header>
 
 <script>
