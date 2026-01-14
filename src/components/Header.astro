@@ -7,54 +7,31 @@ const hasEducation = siteConfig.education?.length > 0;
 ---
 
 <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-  <nav class="max-w-6xl mx-auto px-8 py-6 flex items-center justify-center gap-10">
+  <nav class="max-w-6xl mx-auto px-6 sm:px-8 py-4 sm:py-6 flex items-center justify-center relative">
 
-    <!-- Moon logo (left of nav, like his) -->
-    <div class="absolute left-8">
+    <!-- Left logo (desktop only) -->
+    <div class="absolute left-6 hidden sm:block">
       <span id="theme-logo" class="text-xl text-[var(--text)]">☾</span>
     </div>
 
-    <!-- Centered navigation -->
-    <ul class="flex items-center gap-10 text-[var(--text)] font-medium">
-
-      <a href="/" class="nav-link">Home</a>
+    <!-- Center navigation -->
+    <ul class="flex items-center gap-6 sm:gap-10 text-[var(--text)] font-medium">
+      <li><a href="/" class="nav-link">Home</a></li>
       <li><a href="/#about" class="nav-link">About</a></li>
-
       {hasProjects && <li><a href="/projects" class="nav-link">Projects</a></li>}
-
-
       {hasEducation && <li><a href="/education" class="nav-link">Education</a></li>}
     </ul>
 
-    <!-- Theme toggle on right -->
-    <div class="absolute right-8">
+    <!-- Theme toggle (desktop only) -->
+    <div class="absolute right-6 hidden sm:block">
       <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
-  <div class="toggle-track">
-    <div class="toggle-thumb">
-      <span class="toggle-icon">☾</span>
+        <div class="toggle-track">
+          <div class="toggle-thumb">
+            <span class="toggle-icon">☾</span>
+          </div>
+        </div>
+      </button>
     </div>
-  </div>
-</button>
-
-<nav class="max-w-6xl mx-auto px-6 sm:px-8 py-4 sm:py-6 flex items-center justify-center relative">
-
-  <div class="absolute left-6 hidden sm:block">
-    <span id="theme-logo" class="text-xl text-[var(--text)]">☾</span>
-  </div>
-
-  <ul class="hidden sm:flex items-center gap-10 text-[var(--text)] font-medium">
-    <li><a href="/" class="nav-link">Home</a></li>
-    <li><a href="/#about" class="nav-link">About</a></li>
-    {hasProjects && <li><a href="/projects" class="nav-link">Projects</a></li>}
-    {hasEducation && <li><a href="/education" class="nav-link">Education</a></li>}
-  </ul>
-
-  <div class="absolute right-6 hidden sm:block">
-    <!-- theme toggle button -->
-  </div>
-
-</nav>
-
 
   </nav>
 </header>
