@@ -2,39 +2,102 @@
 import { siteConfig } from "../config";
 ---
 
-<section id="about" class="p-8 sm:p-12 md:p-16 lg:p-24">
-  <div>
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
-      <div class="lg:col-span-4">
-        <h2
-          class="text-3xl sm:text-4xl md:text-5xl xl:text-7xl font-bold text-gray-900"
-        >
-          About Me
-        </h2>
-        <div
-          class="w-[75px] h-[5px] mt-2 rounded-full"
-          style={`background-color: ${siteConfig.accentColor}`}
-        >
-        </div>
-      </div>
+<section id="about" class="relative py-24 md:py-32">
 
-      <div class="lg:col-span-8 space-y-8">
-        <p class="text-lg sm:text-xl md:text-2xl leading-relaxed text-gray-600">
-          {siteConfig.aboutMe}
-        </p>
+  <div class="max-w-6xl mx-auto px-8 grid md:grid-cols-2 gap-16 items-start">
 
-        <div class="pt-4">
-          <div class="flex flex-wrap gap-3">
-            {
-              siteConfig.skills.map((skill) => (
-                <span class="px-3 sm:px-4 py-1.5 sm:py-2 bg-gray-100 text-gray-800 rounded-full text-sm sm:text-base md:text-lg font-medium hover:bg-gray-200 transition-colors duration-200">
-                  {skill}
-                </span>
-              ))
-            }
-          </div>
-        </div>
+    <!-- Left: Text content -->
+    <div>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-6" style="color: var(--text);">
+        About
+      </h2>
+
+      <p class="text-lg leading-relaxed mb-10" style="color: var(--subtext);">
+        {siteConfig.aboutMe}
+      </p>
+
+      <div class="flex gap-4">
+        <a href="/cv.pdf" class="about-btn">
+          Curriculum Vitae
+        </a>
+
+        <a href="/projects" class="about-btn secondary">
+          Projects
+        </a>
       </div>
     </div>
+
+    <!-- Right: Interests card -->
+    <div class="about-card">
+      <h3 class="text-lg font-semibold mb-5" style="color: var(--text);">
+        Interests
+      </h3>
+
+      <div class="flex flex-wrap gap-3">
+        {siteConfig.interests.map((interest) => (
+            <span class="interest-pill">
+              {interest}
+            </span>
+        ))}
+      </div>
+    </div>
+
   </div>
 </section>
+
+<style>
+/* Glass card */
+.about-card {
+  background: color-mix(in srgb, var(--bg) 70%, transparent);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 28px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+}
+
+/* Interest pills */
+.interest-pill {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent-color) 18%, var(--card));
+  border: 1px solid color-mix(in srgb, var(--accent-color) 40%, var(--border));
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+.interest-pill:hover {
+  background: var(--accent-color);
+  color: white;
+  box-shadow: 0 0 18px color-mix(in srgb, var(--accent-color) 45%, transparent);
+  transform: translateY(-2px);
+}
+
+/* Buttons */
+.about-btn {
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  color: var(--text);
+  background: var(--card);
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+.about-btn:hover {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 16px color-mix(in srgb, var(--accent-color) 40%, transparent);
+}
+
+.about-btn.secondary {
+  background: transparent;
+}
+</style>

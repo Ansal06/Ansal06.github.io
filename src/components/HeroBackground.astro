@@ -1,0 +1,38 @@
+---
+import { siteConfig } from "../config";
+---
+
+<!-- Fixed global background -->
+<div class="fixed inset-0 -z-10">
+
+  <!-- Accent radial glow -->
+  <div
+    class="absolute inset-0"
+    style={`background: radial-gradient(
+      ellipse 900px 1200px at 0% 0%, 
+      ${siteConfig.accentColor}30 0%, 
+      ${siteConfig.accentColor}15 25%, 
+      ${siteConfig.accentColor}05 45%, 
+      transparent 70%
+    )`}
+  ></div>
+
+  <!-- Physics pattern -->
+  <svg class="absolute inset-0 w-full h-full pointer-events-none">
+    <defs>
+      <pattern id="physics-symbols" width="400" height="400" patternUnits="userSpaceOnUse">
+        <text x="40" y="60" fill={siteConfig.accentColor} opacity="0.08" font-size="26">∇·E</text>
+        <text x="180" y="100" fill={siteConfig.accentColor} opacity="0.08" font-size="24">ψ(x,t)</text>
+        <text x="280" y="80" fill={siteConfig.accentColor} opacity="0.08" font-size="22">ℏ</text>
+        <text x="120" y="200" fill={siteConfig.accentColor} opacity="0.08" font-size="24">∫</text>
+        <text x="320" y="190" fill={siteConfig.accentColor} opacity="0.08" font-size="22">∂x</text>
+        <text x="220" y="260" fill={siteConfig.accentColor} opacity="0.08" font-size="26">Σ</text>
+        <text x="60" y="330" fill={siteConfig.accentColor} opacity="0.08" font-size="22">Ω</text>
+        <text x="340" y="310" fill={siteConfig.accentColor} opacity="0.08" font-size="24">ds²</text>
+      </pattern>
+    </defs>
+
+    <rect width="100%" height="100%" fill="url(#physics-symbols)"></rect>
+  </svg>
+
+</div>

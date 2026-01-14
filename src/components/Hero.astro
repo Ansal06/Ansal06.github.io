@@ -1,305 +1,305 @@
 ---
 import { siteConfig } from "../config";
 ---
+<link href="https://fonts.googleapis.com/css2?family=Latin+Modern+Roman:wght@400;700&display=swap" rel="stylesheet">
+
 
 <div
   id="hero"
-  class="relative isolate overflow-hidden bg-white py-24 md:h-screen"
-  style={`--accent-color: ${siteConfig.accentColor}`}
+  class="relative isolate overflow-hidden md:h-screen"
 >
-  <!-- Gradient overlay -->
+
+  <!-- Accent radial gradient -->
   <div
-    class="absolute inset-0 -z-10"
-    style={`background: radial-gradient(ellipse 800px 1200px at 0% 0%, ${siteConfig.accentColor}40 0%, ${siteConfig.accentColor}25 20%, ${siteConfig.accentColor}10 40%, rgba(255, 255, 255, 0.3) 70%, rgba(255, 255, 255, 0.8) 90%, white 100%)`}
-  >
-  </div>
-  <svg
-    aria-hidden="true"
-    class="absolute inset-0 -z-10 size-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
-  >
-    <defs>
-      <pattern
-        x="50%"
-        y={-1}
-        id="0787a7c5-978c-4f66-83c7-11c213f99cb7"
-        width={200}
-        height={200}
-        patternUnits="userSpaceOnUse"
-      >
-        <path d="M.5 200V.5H200" fill="none"></path>
-      </pattern>
-      <pattern
-        id="programming-symbols"
-        x="0"
-        y="0"
-        width="400"
-        height="400"
-        patternUnits="userSpaceOnUse"
-      >
-        <text
-          x="50"
-          y="50"
-          fill={siteConfig.accentColor}
-          font-family="monospace"
-          font-size="24"
-          transform="rotate(-15)">&lt;/&gt;</text
-        >
-        <text
-          x="150"
-          y="100"
-          fill={siteConfig.accentColor}
-          font-family="monospace"
-          font-size="20"
-          transform="rotate(10)">{}</text
-        >
-        <text
-          x="250"
-          y="80"
-          fill={siteConfig.accentColor}
-          font-family="monospace"
-          font-size="18"
-          transform="rotate(-5)">=&gt;</text
-        >
-        <text
-          x="100"
-          y="200"
-          fill={siteConfig.accentColor}
-          font-family="monospace"
-          font-size="22"
-          transform="rotate(15)">[]</text
-        >
-        <text
-          x="300"
-          y="180"
-          fill={siteConfig.accentColor}
-          font-family="monospace"
-          font-size="20"
-          transform="rotate(-10)">&lt;&gt;</text
-        >
-        <text
-          x="200"
-          y="250"
-          fill={siteConfig.accentColor}
-          font-family="monospace"
-          font-size="24"
-          transform="rotate(5)">()</text
-        >
-        <text
-          x="50"
-          y="320"
-          fill={siteConfig.accentColor}
-          font-family="monospace"
-          font-size="18"
-          transform="rotate(-8)">::</text
-        >
-        <text
-          x="350"
-          y="300"
-          fill={siteConfig.accentColor}
-          font-family="monospace"
-          font-size="22"
-          transform="rotate(12)">==</text
-        >
-        <text
-          x="150"
-          y="350"
-          fill={siteConfig.accentColor}
-          font-family="monospace"
-          font-size="20"
-          transform="rotate(-15)">++</text
-        >
-        <text
-          x="250"
-          y="370"
-          fill={siteConfig.accentColor}
-          font-family="monospace"
-          font-size="24"
-          transform="rotate(8)">;</text
-        >
-      </pattern>
-    </defs>
-    <rect
-      fill="url(#programming-symbols)"
-      width="100%"
-      height="100%"
-      opacity="0.2"></rect>
-    <rect
-      fill="url(#0787a7c5-978c-4f66-83c7-11c213f99cb7)"
-      width="100%"
-      height="100%"
-      stroke-width={0}></rect>
-  </svg>
-  <div class="h-full mx-auto p-8 sm:p-12 md:p-24 flex items-center">
-    <div>
-      <h2
-        class="text-pretty text-xl sm:text-2xl md:text-5xl font-bold tracking-tight text-gray-700 animate-fade-in"
-      >
-        Hello! 👋
-      </h2>
-      <h1
-        class="mt-6 sm:mt-8 md:mt-10 text-pretty text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold tracking-tight text-gray-800 animate-fade-in animation-delay-200"
-      >
-        I'm <span style={{ color: siteConfig.accentColor }}
-          >{siteConfig.name}</span
-        >
-      </h1>
-      <p
-        class="mt-4 sm:mt-6 md:mt-8 text-pretty text-base sm:text-lg md:text-xl/8 font-medium text-gray-600 animate-fade-in animation-delay-400"
-      >
-        {siteConfig.title}
-      </p>
-    </div>
-  </div>
-  <div
-    class="absolute bottom-0 left-0 right-0 p-8 sm:p-12 md:p-24 flex gap-x-4 sm:gap-x-6 md:gap-x-8 text-gray-700 animate-fade-in animation-delay-600"
-  >
-    {
-      siteConfig.social?.email && (
-        <a
-          href={`mailto:${siteConfig.social.email}`}
-          aria-label="Email"
-          class="transition-colors duration-300 hover:text-[var(--accent-color)]"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
-            <path d="M3 7l9 6l9 -6" />
-          </svg>
-        </a>
-      )
-    }
-    {
-      siteConfig.social?.linkedin && (
-        <a
-          href={siteConfig.social.linkedin}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="LinkedIn"
-          class="transition-colors duration-300 hover:text-[var(--accent-color)]"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8"
-          >
-            <>
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M8 11v5" />
-              <path d="M8 8v.01" />
-              <path d="M12 16v-5" />
-              <path d="M16 16v-3a2 2 0 1 0 -4 0" />
-              <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
-            </>
-          </svg>
-        </a>
-      )
-    }
-    {
-      siteConfig.social?.twitter && (
-        <a
-          href={siteConfig.social.twitter}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Twitter"
-          class="transition-colors duration-300 hover:text-[var(--accent-color)]"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8"
-          >
-            <>
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
-              <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
-            </>
-          </svg>
-        </a>
-      )
-    }
-    {
-      siteConfig.social?.github && (
-        <a
-          href={siteConfig.social.github}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="GitHub"
-          class="transition-colors duration-300 hover:text-[var(--accent-color)]"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8"
-          >
-            <>
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
-            </>
-          </svg>
-        </a>
-      )
-    }
+    class="absolute inset-0 z-0"
+    style={`background: radial-gradient(
+      ellipse 900px 1200px at 0% 0%, 
+      ${siteConfig.accentColor}30 0%, 
+      ${siteConfig.accentColor}15 25%, 
+      ${siteConfig.accentColor}05 45%, 
+      transparent 70%
+    )`}
+  ></div>
+
+<!-- Physics SVG background -->
+<svg
+  aria-hidden="true"
+  class="bg-svg absolute inset-0 z-10 size-full pointer-events-none"
+>
+  <defs>
+    <pattern
+      id="physics-symbols"
+      x="0"
+      y="0"
+      width="400"
+      height="400"
+      patternUnits="userSpaceOnUse"
+    >
+      <text x="40" y="60" fill={siteConfig.accentColor} font-family="serif" font-size="26">∇·E</text>
+      <text x="180" y="100" fill={siteConfig.accentColor} font-family="serif" font-size="24">ψ(x,t)</text>
+      <text x="280" y="80" fill={siteConfig.accentColor} font-family="serif" font-size="22">ℏ</text>
+      <text x="120" y="200" fill={siteConfig.accentColor} font-family="serif" font-size="24">∫</text>
+      <text x="320" y="190" fill={siteConfig.accentColor} font-family="serif" font-size="22">∂x</text>
+      <text x="220" y="260" fill={siteConfig.accentColor} font-family="serif" font-size="26">Σ</text>
+      <text x="60" y="330" fill={siteConfig.accentColor} font-family="serif" font-size="22">Ω</text>
+      <text x="340" y="310" fill={siteConfig.accentColor} font-family="serif" font-size="24">ds²</text>
+      <text x="140" y="360" fill={siteConfig.accentColor} font-family="serif" font-size="23">λ</text>
+    </pattern>
+  </defs>
+
+  <rect fill="url(#physics-symbols)" width="100%" height="100%"></rect>
+</svg>
+ 
+<svg
+  aria-hidden="true"
+  class="bg-svg absolute inset-0 z-10 w-full h-full pointer-events-none"
+  viewBox="0 0 100 100"
+  preserveAspectRatio="none"
+>
+  <!-- Multiple continuous curved lines -->
+  <g stroke={siteConfig.accentColor} stroke-width="0.6" fill="none">
+    <path d="M -30 110 C 0 10, 30 10, 60 110 S 140 210, 180 80" />
+    <path d="M -30 100 C 0 0, 30 0, 60 100 S 140 200, 180 70" />
+    <path d="M -30 90  C 0 -10, 30 -10, 60 90  S 140 190, 180 60" />
+    <path d="M -30 80  C 0 -20, 30 -20, 60 80  S 140 180, 180 50" />
+    <path d="M -30 70  C 0 -30, 30 -30, 60 70  S 140 170, 180 40" />
+    <path d="M -30 60  C 0 -40, 30 -40, 60 60  S 140 160, 180 30" />
+    <path d="M -30 50  C 0 -50, 30 -50, 60 50  S 140 150, 180 20" />
+    <path d="M -30 40  C 0 -60, 30 -60, 60 40  S 140 140, 180 10" />
+  </g>
+</svg>
+
+
+  <!-- Hover glow -->
+  <div id="hover-glow"></div>
+
+<div class="hero-content relative z-10 flex items-center justify-center min-h-screen px-8">
+  <div class="max-w-3xl text-left">
+    
+    <h2 class="text-2xl md:text-4xl font-medium text-[var(--subtext)]">
+      Hello! <span class="wave">👋</span>
+    </h2>
+
+    <h1 class="mt-6 text-5xl md:text-8xl font-bold">
+  <span class="im-text">I'm</span><span class="name-gradient name-space">{siteConfig.name}</span>
+</h1>
+
+
+    <p class="mt-6 text-xl text-[var(--subtext)]">
+      {siteConfig.title}
+    </p>
+
   </div>
 </div>
 
+
+  <div class="absolute bottom-6 left-8 
+            flex flex-row gap-x-6 items-center 
+            text-[var(--subtext)] 
+            animate-fade-in animation-delay-600
+            z-20">
+
+  <!-- Email -->
+  {siteConfig.social?.email && (
+    <a href={`mailto:${siteConfig.social.email}`} aria-label="Email" class="social-icon">
+      <svg viewBox="0 0 24 24" class="w-9 h-9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 7a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/>
+        <path d="M3 7l9 6 9-6"/>
+      </svg>
+    </a>
+  )}
+
+  <!-- LinkedIn -->
+  {siteConfig.social?.linkedin && (
+    <a href={siteConfig.social.linkedin} target="_blank" aria-label="LinkedIn" class="social-icon">
+      <svg viewBox="0 0 24 24" class="w-9 h-9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8 11v5"/>
+        <path d="M8 8v.01"/>
+        <path d="M12 16v-5"/>
+        <path d="M16 16v-3a2 2 0 10-4 0"/>
+        <path d="M3 7a4 4 0 014-4h10a4 4 0 014 4v10a4 4 0 01-4 4H7a4 4 0 01-4-4z"/>
+      </svg>
+    </a>
+  )}
+
+  <!-- GitHub -->
+  {siteConfig.social?.github && (
+    <a href={siteConfig.social.github} target="_blank" aria-label="GitHub" class="social-icon">
+      <svg viewBox="0 0 24 24" class="w-9 h-9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.56v-1.98c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18a11.1 11.1 0 015.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.41-5.26 5.69.41.35.78 1.03.78 2.07v3.07c0 .31.2.66.79.55A11.52 11.52 0 0023.5 12C23.5 5.65 18.35.5 12 .5z"/>
+      </svg>
+    </a>
+  )}
+
+  <!-- Instagram -->
+  {siteConfig.social?.instagram && (
+    <a href={siteConfig.social.instagram} target="_blank" aria-label="Instagram" class="social-icon">
+      <svg viewBox="0 0 24 24" class="w-9 h-9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="3" width="18" height="18" rx="4"/>
+        <circle cx="12" cy="12" r="4"/>
+        <circle cx="17.5" cy="6.5" r="0.7"/>
+      </svg>
+    </a>
+  )}
+
+</div>
+
+<!-- Hover glow script -->
+<script>
+  const hero = document.getElementById("hero");
+  const glow = document.getElementById("hover-glow");
+  const html = document.documentElement;
+
+  hero.addEventListener("mousemove", (e) => {
+    const r = hero.getBoundingClientRect();
+    const x = e.clientX - r.left;
+    const y = e.clientY - r.top;
+
+    // Check light vs dark
+    const isLight = html.classList.contains("light");
+
+    glow.style.background = isLight
+      ? `radial-gradient(
+          600px circle at ${x}px ${y}px,
+          rgba(30, 64, 260, 0.30),   /* darker blue for light mode */
+          transparent 60%
+        )`
+      : `radial-gradient(
+          600px circle at ${x}px ${y}px,
+          rgba(96, 165, 250, 0.22),  /* current glow for dark mode */
+          transparent 40%
+        )`;
+  });
+</script>
+
 <style>
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
 
-  .animate-fade-in {
-    animation: fadeIn 0.8s ease-out forwards;
-    opacity: 0;
-  }
+/* Hover glow layer */
+#hover-glow {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  transition: background 0.15s ease;
+}
 
-  .animation-delay-200 {
-    animation-delay: 0.2s;
-  }
+/* Main text content */
+#hero .hero-content {
+  position: relative;
+  z-index: 2;
+}
 
-  .animation-delay-400 {
-    animation-delay: 0.4s;
-  }
 
-  .animation-delay-600 {
-    animation-delay: 0.6s;
-  }
+/* --- Social icon animation --- */
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--subtext);         
+  opacity: 0.85;             
+  transition: color 0.25s ease, transform 0.2s ease, opacity 0.2s ease;
+}
+
+.social-icon:hover {
+  color: var(--accent-color);
+  opacity: 1;
+  transform: translateY(-3px);
+}
+
+
+/* --- Physics symbol opacity control --- */
+
+/* Dark mode — softer symbols */
+html:not(.light) #hero text {
+  opacity: 0.045;
+}
+
+/* Light mode — slightly stronger */
+html.light #hero text {
+  opacity: 0.085;
+}
+
+/* --- Name font --- */
+.name-font {
+  letter-spacing: -0.03em;
+}
+
+.name-gradient {
+  color: #2563eb;   /* nice modern blue */
+}
+
+.name-space {
+  margin-left: 0.20em;
+}
+
+/* "I'm" styling */
+.im-text {
+  font-family: "Latin Modern Roman", "CMU Serif", serif;
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.hero-content p {
+  font-family: "Latin Modern Roman", "CMU Serif", serif;
+  font-weight: 400;
+  color: var(--subtext);
+  letter-spacing: 0.02em;
+  font-size: 1.05rem;
+}
+
+/* Name gradient accent */
+.name-gradient {
+  color: #3b82f6;   
+  font-family: "Latin Modern Roman", "CMU Serif", serif;
+  letter-spacing: -0.03em;
+}
+
+/* --- Waving emoji --- */
+.wave {
+  display: inline-block;
+  animation: wave 1.5s infinite;
+  transform-origin: 70% 70%;
+}
+
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  20% { transform: rotate(14deg); }
+  40% { transform: rotate(-8deg); }
+  60% { transform: rotate(14deg); }
+  80% { transform: rotate(-4deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.header {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; font-weight: 450;
+}
+
+.footer {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+#hero .bg-svg path {
+  stroke: color-mix(in srgb, var(--accent-color) 35%, transparent);
+  stroke-width: 0.3;
+  opacity: 0.05;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#hero svg,
+#hover-glow {
+  pointer-events: none;
+}
 </style>

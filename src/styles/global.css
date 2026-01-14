@@ -1,5 +1,45 @@
 @import "tailwindcss";
 
 body {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Computer Modern Sans', monospace;
+}
+
+/* ===== Theme Variables ===== */
+
+:root {
+  --bg: #0b1220;
+  --text: #f9fafb;
+  --subtext: #cbd5e1;
+  --card: #111827;
+  --border: #1f2937;
+  --blur-bg: rgba(11, 18, 32, 0.85);
+}
+
+:root.light {
+  --bg: #f8fafc;
+  --text: #0f172a;
+  --subtext: #334155;
+  --card: #ffffff;
+  --border: #e2e8f0;
+  --blur-bg: rgba(248, 250, 252, 0.85);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ===== Header Blur Class ===== */
+
+.header-blur {
+  background-color: var(--blur-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Hover blur directly in CSS */
+#header:hover {
+  background-color: var(--blur-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
