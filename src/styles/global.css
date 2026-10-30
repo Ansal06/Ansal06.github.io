@@ -43,3 +43,30 @@ body {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
+
+.project-docs {
+  position: absolute;
+  bottom: 14px;
+  right: 58px;
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--subtext);
+  transition: all 0.3s ease;
+}
+
+.project-docs:hover {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+  box-shadow: 0 0 12px color-mix(in srgb, var(--accent-color) 50%, transparent);
+  transform: translateY(-2px);
+}
+
+.docs-icon {
+  width: 18px;
+  height: 18px;
+}
