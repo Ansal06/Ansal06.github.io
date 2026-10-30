@@ -32,7 +32,6 @@ export const siteConfig = {
     "Gravitational Wave Lensing",
     "Python",
     "Numerical Methods",
-    "Scientific Computing"
   ],
   category: "Gravitational Waves",
   image: "/images/gwlens.png",
