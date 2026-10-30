@@ -24,7 +24,7 @@ export const siteConfig = {
         {
   name: "GWLENS: Gravitational Wave Lensing Exploration of Non-visible Structures",
   description:
-    "A Python package for wave-optics gravitational lensing of gravitational waves. Numerically solves the Fresnel–Kirchhoff diffraction integral to compute frequency-dependent amplification factors across different lens models, with applications to waveform analysis and Bayesian parameter inference using Bilby.",
+    "A Python package for wave-optics gravitational lensing of gravitational waves.",
   link: "https://github.com/hsreekanth15/GWLENS",
   github: "https://github.com/hsreekanth15/GWLENS",
   docs: "https://hsreekanth15.github.io/GWLENS",
@@ -40,8 +40,9 @@ export const siteConfig = {
 
      {
   name: "Globular Clusters as lenses",
+  date: "Under preparation",
   description:
-    "Investigating the suitability of different mass models like Singular Isothermal Sphere (SIS), Cored Isothermal Sphere (CIS), and Plummer models to identify which best approximates the lensing properties of globular clusters.",
+    "Investigating the suitability of different mass models to approximate lensing by globular clusters.",
   skills: [
     "Gravitational Wave Lensing",
     "Numerical Methods",
@@ -49,18 +50,18 @@ export const siteConfig = {
   ],
   category: "Gravitational Waves",
   image: "/images/globular.png",
-  date: "Under preparation",
     },
      
     {
       name: "Gravitational wave lensing by dark matter halos hosting massive black holes",
+      date: "Under preparation",
       description:
-        "Simulations of microlensing by massive black holes embedded in subhalos",
+        "Simulations of gravitational lensing by massive black holes embedded in subhalos.",
       link: "https://github.com/Ansal06/mbh-subhalo-lensing",
       github:"https://github.com/Ansal06/mbh-subhalo-lensing", 
       skills: ["Gravitational Wave Lensing", "Python"],
       category: "Gravitational Waves",
-      image: "/images/lensing.jpg",
+      image: "/images/lensing.png",
     },
     {
       name: "Iterative Phase Retrieval using the Hybrid Input-Output Algorithm",
